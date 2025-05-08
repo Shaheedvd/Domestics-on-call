@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Very Light Gray - Clean base */
+    --foreground: 210 15% 20%; /* Dark Slate Gray - Good contrast */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 15% 20%; /* Dark Slate Gray */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 210 15% 20%; /* Dark Slate Gray */
+
+    --primary: 180 70% 45%; /* Vibrant Cyan/Teal - Brilliant */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 190 30% 90%; /* Light, slightly cool gray - Subtle secondary */
+    --secondary-foreground: 180 50% 30%; /* Darker Teal for text on secondary */
+
+    --muted: 210 20% 95%; /* Very Light Gray - For muted backgrounds */
+    --muted-foreground: 210 10% 50%; /* Medium Gray - For muted text */
+
+    --accent: 35 100% 58%; /* Bright Energetic Orange - Brilliant Accent */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 84.2% 60.2%; /* Default Red */
+    --destructive-foreground: 0 0% 98%; /* Default Light Text for Destructive */
+
+    --border: 210 20% 88%; /* Light gray border */
+    --input: 210 20% 88%; /* Input border */
+    --ring: 180 70% 50%; /* Primary color for focus rings */
+
+    --chart-1: 180 70% 40%; /* Darker Primary Teal */
+    --chart-2: 35 100% 50%; /* Darker Accent Orange */
+    --chart-3: 200 70% 55%; /* Brilliant Blue */
+    --chart-4: 280 60% 60%; /* Brilliant Purple */
+    --chart-5: 0 70% 60%;   /* Brilliant Red (non-destructive) */
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 15% 20%;
+    --sidebar-primary: 180 70% 45%; 
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 90% 92%; /* Lighter Warm Orange for sidebar accent hover */
+    --sidebar-accent-foreground: 35 100% 30%; /* Darker Orange for text on sidebar accent */
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 180 70% 50%;
+  }
+
+  .dark {
+    --background: 220 15% 10%; /* Very Dark Blue/Gray */
+    --foreground: 0 0% 96%; /* Very Light Gray/Off-White */
+
+    --card: 220 15% 15%; /* Slightly lighter dark for cards */
+    --card-foreground: 0 0% 96%;
+
+    --popover: 220 15% 15%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 180 70% 55%; /* Slightly lighter/brighter primary for dark mode */
+    --primary-foreground: 210 20% 10%; /* Dark text on bright primary */
+
+    --secondary: 220 15% 25%; /* Darker muted secondary */
+    --secondary-foreground: 0 0% 85%; /* Lighter text on dark secondary */
+
+    --muted: 220 10% 20%; /* Dark muted background */
+    --muted-foreground: 0 0% 65%; /* Medium-light gray for muted text */
+
+    --accent: 35 100% 60%; /* Bright Orange - remains brilliant */
+    --accent-foreground: 210 100% 15%; /* Very dark text on bright accent */
+
+    --destructive: 0 70% 55%; /* Slightly brighter red for dark mode */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 30%; /* Subtle dark border */
+    --input: 220 15% 30%; 
+    --ring: 180 70% 55%; /* Primary color for focus rings */
+
+    --chart-1: 180 70% 60%; /* Lighter Primary Teal */
+    --chart-2: 35 100% 65%; /* Lighter Accent Orange */
+    --chart-3: 200 70% 65%; /* Brilliant Blue - Lighter */
+    --chart-4: 280 60% 70%; /* Brilliant Purple - Lighter */
+    --chart-5: 0 70% 70%;   /* Brilliant Red (non-destructive) - Lighter */
+    
+    --sidebar-background: 220 10% 8%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 180 70% 55%; 
+    --sidebar-primary-foreground: 210 20% 10%;
+    --sidebar-accent: 35 100% 50%; 
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 180 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+}
